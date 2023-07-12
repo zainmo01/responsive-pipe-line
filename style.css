@@ -1,0 +1,40 @@
+.content {
+  display: flex;
+}
+.letter {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(221 221 221);
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 5px;
+}
+.paragraph {
+  display: block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(221 221 221);
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 5px;
+  position: relative;
+}
+.paragraph .pipline {
+  width: 10px;
+  height: 100%;
+  background-color: rgb(12 135 183);
+  position: absolute;
+  right: -13px;
+  top: -1px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .letter {
+    background-color: blueviolet;
+  }
+}
