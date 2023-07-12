@@ -2,15 +2,17 @@
   display: flex;
 }
 .letter {
-  margin-right: 15px;
+  margin-right: 25px;
   margin-bottom: 15px;
   background-color: rgb(221 221 221);
   font-size: 3rem;
   font-weight: 900;
   padding: 5px;
+  width: 150px;
+  text-align: center;
 }
 .paragraph {
-  display: block;
+  width: 80%;
   margin-right: 15px;
   margin-bottom: 15px;
   background-color: rgb(221 221 221);
@@ -19,13 +21,25 @@
   padding: 5px;
   position: relative;
 }
-.paragraph .pipline {
+.paragraph::after {
+  content: "";
   width: 10px;
   height: 100%;
   background-color: rgb(12 135 183);
   position: absolute;
   right: -13px;
   top: -1px;
+}
+.paragraph::before {
+  content: "";
+  width: 0;
+  height: 0;
+  left: -23px;
+  bottom: 20px;
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgb(12 135 183) transparent transparent;
 }
 
 @media (max-width: 600px) {
@@ -35,6 +49,11 @@
     width: 100%;
   }
   .letter {
-    background-color: blueviolet;
+    color: white;
+    background-color: #005067;
+    width: 83%;
+  }
+  ::before {
+    display: none;
   }
 }
